@@ -1,0 +1,2 @@
+const board=document.querySelector('#board');const pieces=[['♜','♞','♝','♛','♚','♝','♞','♜'],Array(8).fill('♟'),...Array.from({length:4},()=>Array(8).fill('')),Array(8).fill('♙'),['♖','♘','♗','♕','♔','♗','♘','♖']];
+pieces.forEach((row,r)=>row.forEach((piece,c)=>{const square=document.createElement('div');square.className='square '+((r+c)%2?'dark':'light');square.textContent=piece; square.dataset.row=r;square.dataset.col=c;board.append(square)}));
